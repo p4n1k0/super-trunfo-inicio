@@ -1,6 +1,7 @@
 #include <stdio.h>
 
-int main() {
+int main()
+{
     // --- Declaração das variáveis ---
     char estado1, estado2;
     char codigo1[5], codigo2[5];
@@ -57,98 +58,157 @@ int main() {
     printf("Pontos turísticos: ");
     scanf("%d", &turismo2);
 
-    // === Cálculo de Densidade demográfica ===
+    // === Cálculo de Densidade e PIB per capita ===
     densidade1 = populacao1 / area1;
     densidade2 = populacao2 / area2;
     pib_per_capita1 = (pib1 * 1e9) / populacao1;
     pib_per_capita2 = (pib2 * 1e9) / populacao2;
 
-    int opcao;
+    // --- Declaração das variáveis ---
+    int atributo1, atributo2;
+    float valor1_c1 = 0, valor1_c2 = 0; // --- Variável para fazer comparações de atributos ---
+    float valor2_c1 = 0, valor2_c2 = 0;
+    float soma1, soma2; // --- Variável para somar atributos ---
 
     // === Menu Interativo ===
-    printf("\n=== MENU DE COMPARAÇÃO ===\n");
+    printf("\n=== MENU DE COMPARAÇÃO AVANÇADA ===\n");
     printf("1 - População\n");
     printf("2 - Área\n");
     printf("3 - PIB\n");
     printf("4 - Pontos Turísticos\n");
-    printf("5 - Densidade Populacional\n");
+    printf("5 - Densidade Populacional (menor vence)\n");
     printf("6 - PIB per Capita\n");
-    printf("Escolha o atributo para comparar: ");
-    scanf("%d", &opcao);
 
-    // === Usando Switch Case para comparações ===
-    printf("\n=== Comparação ===\n");
+    printf("\nEscolha o PRIMEIRO atributo: ");
+    scanf("%d", &atributo1);
 
-    switch (opcao) {
+    printf("\nEscolha o SEGUNDO atributo (diferente do primeiro):\n");
+    for (int i = 1; i <= 6; i++)
+    {
+        if (i == atributo1)
+            continue; // evita repetir atributo
+        switch (i)
+        {
         case 1:
-            printf("Atributo: População\n");
-            printf("%s: %d\n%s: %d\n", cidade1, populacao1, cidade2, populacao2);
-            if (populacao1 > populacao2)
-                printf("Resultado: %s (País: Eldia) venceu!\n", cidade1);
-            else if (populacao2 > populacao1)
-                printf("Resultado: %s (País: Marley) venceu!\n", cidade2);
-            else
-                printf("Empate!\n");
+            printf("%d - População\n", i);
             break;
-
         case 2:
-            printf("Atributo: Área\n");
-            printf("%s: %.2f km²\n%s: %.2f km²\n", cidade1, area1, cidade2, area2);
-            if (area1 > area2)
-                printf("Resultado: %s (País: Eldia) venceu!\n", cidade1);
-            else if (area2 > area1)
-                printf("Resultado: %s (País: Marley) venceu!\n", cidade2);
-            else
-                printf("Empate!\n");
+            printf("%d - Área\n", i);
             break;
-
         case 3:
-            printf("Atributo: PIB\n");
-            printf("%s: %.2f bilhões R$\n%s: %.2f bilhões R$\n", cidade1, pib1, cidade2, pib2);
-            if (pib1 > pib2)
-                printf("Resultado: %s (País: Eldia) venceu!\n", cidade1);
-            else if (pib2 > pib1)
-                printf("Resultado: %s (País: Marley) venceu!\n", cidade2);
-            else
-                printf("Empate!\n");
+            printf("%d - PIB\n", i);
             break;
-
         case 4:
-            printf("Atributo: Pontos Turísticos\n");
-            printf("%s: %d\n%s: %d\n", cidade1, turismo1, cidade2, turismo2);
-            if (turismo1 > turismo2)
-                printf("Resultado: %s (País: Eldia) venceu!\n", cidade1);
-            else if (turismo2 > turismo1)
-                printf("Resultado: %s (País: Marley) venceu!\n", cidade2);
-            else
-                printf("Empate!\n");
+            printf("%d - Pontos Turísticos\n", i);
             break;
-
         case 5:
-            printf("Atributo: Densidade Populacional\n");
-            printf("%s: %.2f hab/km²\n%s: %.2f hab/km²\n", cidade1, densidade1, cidade2, densidade2);
-            if (densidade1 < densidade2)
-                printf("Resultado: %s (País: Eldia) venceu! (menor densidade)\n", cidade1);
-            else if (densidade2 < densidade1)
-                printf("Resultado: %s (País: Marley) venceu! (menor densidade)\n", cidade2);
-            else
-                printf("Empate!\n");
+            printf("%d - Densidade Populacional (menor vence)\n", i);
             break;
-
         case 6:
-            printf("Atributo: PIB per Capita\n");
-            printf("%s: %.2f R$\n%s: %.2f R$\n", cidade1, pib_per_capita1, cidade2, pib_per_capita2);
-            if (pib_per_capita1 > pib_per_capita2)
-                printf("Resultado: %s (País: Eldia) venceu!\n", cidade1);
-            else if (pib_per_capita2 > pib_per_capita1)
-                printf("Resultado: %s (País: Marley) venceu!\n", cidade2);
-            else
-                printf("Empate!\n");
+            printf("%d - PIB per Capita\n", i);
             break;
-
-        default:
-            printf("Opção inválida! Escolha de 1 a 6.\n");
+        }
     }
+    printf("Opção: ");
+    scanf("%d", &atributo2);
+
+    // === Caso atributos iguais ocorre erro ===
+    if (atributo1 == atributo2)
+    {
+        printf("\nErro: os dois atributos não podem ser iguais!\n");
+        return 1;
+    }
+
+    // === Atribui os valores dos atributos escolhidos ===
+    // Função genérica via switch
+    switch (atributo1)
+    {
+    case 1:
+        valor1_c1 = populacao1;
+        valor1_c2 = populacao2;
+        break;
+    case 2:
+        valor1_c1 = area1;
+        valor1_c2 = area2;
+        break;
+    case 3:
+        valor1_c1 = pib1;
+        valor1_c2 = pib2;
+        break;
+    case 4:
+        valor1_c1 = turismo1;
+        valor1_c2 = turismo2;
+        break;
+    case 5:
+        valor1_c1 = 1 / densidade1;
+        valor1_c2 = 1 / densidade2;
+        break; // menor vence
+    case 6:
+        valor1_c1 = pib_per_capita1;
+        valor1_c2 = pib_per_capita2;
+        break;
+    default:
+        printf("Atributo inválido!\n");
+        return 1;
+    }
+
+    switch (atributo2)
+    {
+    case 1:
+        valor2_c1 = populacao1;
+        valor2_c2 = populacao2;
+        break;
+    case 2:
+        valor2_c1 = area1;
+        valor2_c2 = area2;
+        break;
+    case 3:
+        valor2_c1 = pib1;
+        valor2_c2 = pib2;
+        break;
+    case 4:
+        valor2_c1 = turismo1;
+        valor2_c2 = turismo2;
+        break;
+    case 5:
+        valor2_c1 = 1 / densidade1;
+        valor2_c2 = 1 / densidade2;
+        break;
+    case 6:
+        valor2_c1 = pib_per_capita1;
+        valor2_c2 = pib_per_capita2;
+        break;
+    default:
+        printf("Atributo inválido!\n");
+        return 1;
+    }
+
+    // === Exibe valores escolhidos ===
+    printf("\n=== VALORES ESCOLHIDOS ===\n");
+
+    char *nomes[7] = {"", "População", "Área", "PIB", "Pontos Turísticos", "Densidade Populacional", "PIB per Capita"};
+    printf("Atributo 1: %s\n", nomes[atributo1]);
+    printf("Atributo 2: %s\n\n", nomes[atributo2]);
+
+    printf("%s -> %.2f e %.2f\n", cidade1, valor1_c1, valor2_c1);
+    printf("%s -> %.2f e %.2f\n", cidade2, valor1_c2, valor2_c2);
+
+    // === Soma dos atributos ===
+    soma1 = valor1_c1 + valor2_c1;
+    soma2 = valor1_c2 + valor2_c2;
+
+    // === Adiciona país relacionado a cidade ===
+    printf("\n=== SOMA DOS ATRIBUTOS ===\n");
+    printf("%s: %.2f (País: Eldia)\n", cidade1, soma1);
+    printf("%s: %.2f (País: Marley)\n", cidade2, soma2);
+
+    // === Resultado final com operador ternário ===
+    printf("\n=== RESULTADO FINAL ===\n");
+    (soma1 > soma2)
+        ? printf("Vencedor: %s (País: Eldia)!\n", cidade1)
+    : (soma2 > soma1)
+        ? printf("Vencedor: %s (País: Marley)!\n", cidade2)
+        : printf("Empate!\n");
 
     return 0;
 }
