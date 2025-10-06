@@ -31,25 +31,27 @@ Desenvolvimento do programa com funcionalidades avançadas, como a comparação 
 
   4. Exemplo de execução:
   
-  === Carta 1 ===
-  Estado (A-H): A
-  Código (ex: A01): A03
-  Cidade: São Paulo
-  População: 12000000
-  Área (km²): 1521
-  PIB (em bilhões R$): 699
-  Pontos turísticos: 40
+  === Carta 1 === <br />
+  Estado (A-H): A <br />
+  Código (ex: A01): A03 <br />
+  Cidade: São Paulo <br />
+  População: 12000000 <br />
+  Área (km²): 1521 <br />
+  PIB (em bilhões R$): 699 <br />
+  Pontos turísticos: 40 <br />
+  <br />
   
-  === Carta 2 ===
-  Estado (A-H): B
-  Código (ex: B02): B02
-  Cidade: Rio de Janeiro
-  População: 6700000
-  Área (km²): 1182
-  PIB (em bilhões R$): 350
-  Pontos turísticos: 30
+  === Carta 2 === <br /> 
+  Estado (A-H): B <br />
+  Código (ex: B02): B02 <br />
+  Cidade: Rio de Janeiro <br />
+  População: 6700000 <br />
+  Área (km²): 1182 <br />
+  PIB (em bilhões R$): 350 <br />
+  Pontos turísticos: 30 <br />
+  <br />
   
-  === MENU DE COMPARAÇÃO COM ATRIBUTOS ===
+  === MENU DE COMPARAÇÃO COM ATRIBUTOS === <br />
   1 - População
   2 - Área
   3 - PIB
