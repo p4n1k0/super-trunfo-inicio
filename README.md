@@ -61,10 +61,8 @@ Desenvolvimento do programa com funcionalidades avançadas, como a comparação 
   <br />
   
   Escolha o PRIMEIRO atributo: 3<br />
-  <br />
   
-  Escolha o SEGUNDO atributo (diferente do primeiro):<br />
-  
+  Escolha o SEGUNDO atributo (diferente do primeiro):<br />  
   1 - População <br />
   2 - Área <br />
   4 - Pontos Turísticos <br />
