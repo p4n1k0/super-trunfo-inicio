@@ -61,7 +61,7 @@ int main()
     // === Cálculo de Densidade e PIB per capita ===
     densidade1 = populacao1 / area1;
     densidade2 = populacao2 / area2;
-    pib_per_capita1 = (pib1 * 1e9) / populacao1;
+    pib_per_capita1 = (pib1 * 1e9) / populacao1; // === 1e9: 1.000.000.000 ===
     pib_per_capita2 = (pib2 * 1e9) / populacao2;
 
     // --- Declaração das variáveis ---
