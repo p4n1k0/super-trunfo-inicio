@@ -52,36 +52,40 @@ Desenvolvimento do programa com funcionalidades avançadas, como a comparação 
   <br />
   
   === MENU DE COMPARAÇÃO COM ATRIBUTOS === <br />
-  1 - População
-  2 - Área
-  3 - PIB
-  4 - Pontos Turísticos
-  5 - Densidade Populacional (menor vence)
-  6 - PIB per Capita 
+  1 - População <br />
+  2 - Área <br />
+  3 - PIB <br />
+  4 - Pontos Turísticos <br />
+  5 - Densidade Populacional (menor vence) <br />
+  6 - PIB per Capita <br />
+  <br />
   
-  Escolha o PRIMEIRO atributo: 3
+  Escolha o PRIMEIRO atributo: 3<br />
+  <br />
   
-  Escolha o SEGUNDO atributo (diferente do primeiro):
+  Escolha o SEGUNDO atributo (diferente do primeiro):<br />
   
-  1 - População
-  2 - Área
-  4 - Pontos Turísticos
-  5 - Densidade Populacional (menor vence)
-  6 - PIB per Capita
-  Opção: 5
+  1 - População <br />
+  2 - Área <br />
+  4 - Pontos Turísticos <br />
+  5 - Densidade Populacional (menor vence) <br />
+  6 - PIB per Capita <br />
+  Opção: 5 <br />
+  <br />
   
-  === VALORES ESCOLHIDOS ===
-  Atributo 1: PIB
-  Atributo 2: Densidade Populacional
+  === VALORES ESCOLHIDOS === <br />
+  Atributo 1: PIB <br />
+  Atributo 2: Densidade Populacional <br />
   
-  São Paulo -> 699.00 e 0.12
-  Rio de Janeiro -> 350.00 e 0.06
+  São Paulo -> 699.00 e 0.12 <br />
+  Rio de Janeiro -> 350.00 e 0.06 <br />
   
-  === SOMA DOS ATRIBUTOS ===
-  São Paulo (País: Eldia): 699.12
-  Rio de Janeiro (País: Marley): 350.06
+  === SOMA DOS ATRIBUTOS === <br />
+  São Paulo (País: Eldia): 699.12 <br />
+  Rio de Janeiro (País: Marley): 350.06 <br />
+  <br />
   
-  === RESULTADO FINAL ===
+  === RESULTADO FINAL === <br />
   Vencedor: São Paulo (País: Eldia)!
 
   
