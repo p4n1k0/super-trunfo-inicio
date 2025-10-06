@@ -25,9 +25,63 @@ Desenvolvimento do programa com funcionalidades avançadas, como a comparação 
 
   - `gcc -o cartas cartas.c`
   
-  3. Inicialize a aplicação
+  3. Inicialize a aplicação:
 
-  - `./cartas`  
+  - `./cartas`
+
+  4. Exemplo de execução:
+  
+  === Carta 1 ===
+  Estado (A-H): A
+  Código (ex: A01): A03
+  Cidade: São Paulo
+  População: 12000000
+  Área (km²): 1521
+  PIB (em bilhões R$): 699
+  Pontos turísticos: 40
+  
+  === Carta 2 ===
+  Estado (A-H): B
+  Código (ex: B02): B02
+  Cidade: Rio de Janeiro
+  População: 6700000
+  Área (km²): 1182
+  PIB (em bilhões R$): 350
+  Pontos turísticos: 30
+  
+  === MENU DE COMPARAÇÃO COM ATRIBUTOS ===
+  1 - População
+  2 - Área
+  3 - PIB
+  4 - Pontos Turísticos
+  5 - Densidade Populacional (menor vence)
+  6 - PIB per Capita 
+  
+  Escolha o PRIMEIRO atributo: 3
+  
+  Escolha o SEGUNDO atributo (diferente do primeiro):
+  
+  1 - População
+  2 - Área
+  4 - Pontos Turísticos
+  5 - Densidade Populacional (menor vence)
+  6 - PIB per Capita
+  Opção: 5
+  
+  === VALORES ESCOLHIDOS ===
+  Atributo 1: PIB
+  Atributo 2: Densidade Populacional
+  
+  São Paulo -> 699.00 e 0.12
+  Rio de Janeiro -> 350.00 e 0.06
+  
+  === SOMA DOS ATRIBUTOS ===
+  São Paulo (País: Eldia): 699.12
+  Rio de Janeiro (País: Marley): 350.06
+  
+  === RESULTADO FINAL ===
+  Vencedor: São Paulo (País: Eldia)!
+
   
 </details>
 
