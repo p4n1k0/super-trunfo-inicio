@@ -21,7 +21,7 @@ int main()
     scanf("%4s", codigo1);
 
     printf("Cidade: ");
-    scanf(" %[^\n]", cidade1);
+    scanf(" %[^\n]", cidade1); // lê até o Enter, aceita espaço
 
     printf("População: ");
     scanf("%d", &populacao1);
@@ -38,13 +38,13 @@ int main()
     // === Cadastro da Carta 2 ===
     printf("\n=== Carta 2 ===\n");
     printf("Estado (A-H): ");
-    scanf(" %c", &estado2);
+    scanf(" %c", &estado2); // espaço antes do %c
 
     printf("Código (ex: B02): ");
     scanf("%4s", codigo2);
 
     printf("Cidade: ");
-    scanf(" %[^\n]", cidade2);
+    scanf(" %[^\n]", cidade2); // lê até o Enter, aceita espaço
 
     printf("População: ");
     scanf("%d", &populacao2);
@@ -62,7 +62,7 @@ int main()
     densidade1 = populacao1 / area1;
     densidade2 = populacao2 / area2;
     pib_per_capita1 = (pib1 * 1e9) / populacao1; // === 1e9: 1.000.000.000 ===
-    pib_per_capita2 = (pib2 * 1e9) / populacao2;
+    pib_per_capita2 = (pib2 * 1e9) / populacao2; // PIB em R$ / habitante
 
     // --- Declaração das variáveis ---
     int atributo1, atributo2;
@@ -87,6 +87,7 @@ int main()
     {
         if (i == atributo1)
             continue; // evita repetir atributo
+        // === Usando Switch Case para comparações ===
         switch (i)
         {
         case 1:
